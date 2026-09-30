@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+  .main-container {
+    width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #e8e5e5;
+    box-shadow: 0 2px 5px rgb(39, 39, 39);
+    border-radius: 10px;
+    
+  }
+
+  section {
+    text-align: center;
+  }
+
+  address {
+    line-height: 1.6;
+  }
+
+ 
+  .form-label {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+   input[type="text"],
+   input[type="email"],
+   input[type="tel"],
+   select,
+   textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1rem;
+    color: #e8e5e5;
+    background-color: rgb(53, 80, 201);
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+  }
+
+  button:hover {
+    background-color: rgb(104, 104, 208);
+    
+  }
+
+  input:valid,
+  textarea:valid,
+  select:valid {
+    border-color: #28a745;
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+footer {
+  color: #ddd;
+  background-color: rgb(51, 50, 50);
+  padding:20px 30px;
+  width: 100%;
+  margin-top: 35px;
+  text-align: center;
+}
+
+
+
+
+</style>
+
+
+<body>
+  <header>
+  <h1> Contact Us</h1>
+  <p> Here you can find the form, please fill it and submit it!</p>
+  </header>
+
+  <main class="main-container">
+    <section>
+      <h2> Contact Information</h2>
+      <address>
+        Email: example@example.com<br>
+        Phone: 000 111 222<br>
+        Address: Unit 0, Preston, UN<br>
+        <br>
+      </address>
+    </section>
+
+    <form id="contact-form" action="#" method="POST">
+      <div class="form-label">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required minlength="2">
+      </div>
+
+      <div class="form-label">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-label">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="0-9">
+      </div>
+
+      <div class="form-label">
+        <label for="subject">Subject:</label>
+        <select type="checkbox" id="subject" name="subject" required>
+          <option>Select a Subject</option>
+          <option>General Enquiry</option>
+          <option>Technical Support</option>
+          <option>Billing Information</option>
+          <option>Other</option>
+        </select>  
+      </div>
+
+      <div class="form-label">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+      </div>
+
+      <div>
+        <label for="newsletter">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        Subscribe to our newsletter</label>
+      </div>
+      <button type="submit"> Send message</button>
+
+    </form>
+   
+  </main>
+  <footer>
+     <p>&copy; 2024 Your Company. All rights reserved.</p>
+  </footer>
+</body>
